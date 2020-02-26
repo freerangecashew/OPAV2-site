@@ -3,6 +3,11 @@
 
     &__home {
         padding-bottom: 180px;
+        overflow: hidden;
+
+        @include laptopL {
+            padding-bottom: 280px;
+        }
     }
 }
 
@@ -26,7 +31,7 @@
 }
 
 .header__container {
-    background: linear-gradient(200deg, rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0.4) 60%), url(../media/planeview2.jpg);
+    background: linear-gradient(200deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .4) 60%), url(../media/northern-lights.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -52,8 +57,12 @@
             margin: 40px 40px 100px 40px;
         }
 
+        @include tablet {
+            margin: 40px;
+        }
+
         @include laptopL {
-            margin: 40px 10% 100px 10%;
+            margin: 40px 10%
         }
     }
 
@@ -78,10 +87,11 @@
 
     &__nav__menu {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        height: 60px;
-        width: 60px;
+        height: 55px;
+        width: 110px;
+        padding: 0 10px;
         border: 2px solid #fff;
         border-radius: 50px;
 
@@ -95,6 +105,22 @@
 
             &--page {
                 color: #646464;
+            }
+        }
+
+        &__bar {
+            display: block;
+            height: 2px;
+            width: 30px;
+            border-radius: 50px;
+            background: #fff;
+            box-shadow: 0 -8px 0 #fff,
+                        0 8px 0 #fff;
+
+            &--page {
+                background: #7CAE7A;
+                box-shadow: 0 -8px 0 #7CAE7A,
+                            0 8px 0 #7CAE7A;
             }
         }
     }
@@ -165,7 +191,7 @@
             left: 0;
             width: 100%; 
             object-fit: cover;
-            opacity: .15;
+            opacity: .2;
         }
     }
 
@@ -230,9 +256,10 @@
         &__img {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            left: 50%;
+            transform: translate(-50%, -50%);
             height: 150px;
-            width: 100%;
+            width: calc(100% + 80px);
             object-fit: cover;
 
             @include tablet {
