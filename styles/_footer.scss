@@ -1,0 +1,158 @@
+.footer {
+    position: relative;
+
+    @include laptop {
+        &::before {
+            content: url("../media/op-logo.png");
+            position: absolute;
+            top: -50px;
+            right: 0;
+            opacity: .4;
+        }
+    }
+
+    &__content {
+        position: relative;
+        background: url("../media/footermtns.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top left;
+        padding: 300px 10px 80px 10px;
+
+        @include mobileL {
+            padding: 300px 40px 60px 40px;
+        }
+
+        @include tablet {
+            padding: 350px 40px 60px 40px;
+            text-align: center;
+        }
+
+        @include laptop {
+            padding: 400px 40px 60px 40px;
+        }
+
+        @include laptopL {
+            padding: 500px 40px 60px 40px;
+        }
+
+        &__text-box {
+
+            &__title {
+                font-size: 30px;
+                color: #f1f1f1;
+
+                @include laptop {
+                    font-size: 40px;
+                }
+
+                span {
+                    display: block;
+
+                    @include mobileL {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            &__desc {
+                margin: 10px 40px 40px 0;
+                color: #d3d3d3;
+                
+                @include mobileL {
+                    font-size: 18px;
+                }
+
+                @include tablet {
+                    max-width: 400px;
+                    margin: 10px auto 40px auto;
+                }
+
+                @include laptop {
+                    max-width: 450px;
+                    font-size: 20px;
+                }
+
+                @include laptop {
+                    max-width: 480px;
+                    font-size: 22px;
+                }
+            }
+
+            &__cta {
+                padding: 8px 24px;
+                border-radius: 50px;
+                background: #7CAE7A;
+                color: #f1f1f1;
+                text-transform: capitalize;
+
+                @include laptop {
+                    font-size: 20px;
+                }
+            }
+        }
+    } // content styles end
+
+    &__nav {
+        padding: 20px 10px 10px 10px;
+
+        @include mobileL {
+            padding: 20px 40px 10px 40px;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+
+            @include tablet {
+                justify-content: center;
+            }
+
+            &__links {
+                display: inline-block;
+                margin: 5px 10px 5px 0;
+                padding: 2px 12px;
+                border-radius: 50px;
+                background: #7CAE7A;
+                color: #f1f1f1;
+                text-transform: capitalize;
+            }
+        }
+    } // footer nav styles end
+
+    &__contact {
+        padding: 0 10px 20px 10px;
+
+        @include mobileL {
+            padding: 0 40px 20px 40px;
+        }
+
+        &__list {
+            display: flex;
+
+            @include tablet {
+                justify-content: center;
+            }
+
+            &__links {
+                margin: 5px 10px 5px 0;
+
+                img {
+                    height: 45px;
+                    width: 45px;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        background: #222;
+        text-align: center;
+        padding: 10px;
+
+        &__title {
+            color: #d3d3d3;
+            text-transform: capitalize;
+        }
+    }
+} // footer styles end

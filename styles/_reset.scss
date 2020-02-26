@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(rgba(256,256,256, .2)), url("../media/ep_naturalwhite.png");
+    font-family: 'Roboto Condensed';
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Permanent Marker';
+    line-height: .9;
+}

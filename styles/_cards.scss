@@ -1,0 +1,114 @@
+.main__cards {
+    position: relative;
+    z-index: 10;
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        padding: 0 40px;
+    }
+
+    @include laptopL {
+        padding: 0 10%;
+    }
+
+    &__large {
+
+        @include laptopL {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__card {
+        background: linear-gradient(rgba(256,256,256, .2)), url("../media/ep_naturalwhite.png");;
+        margin: 0 0 100px 0;
+
+        @include tablet {
+            margin: 0;
+            box-shadow: 0 0 8px rgba(0,0,0, .15);
+        }
+
+        &__img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: -30px;
+        }
+
+        &__header {
+            background: url("../media/tapu.png") no-repeat right;
+            display: inline-block;
+            padding: 10px 40px 10px 10px;
+            filter: drop-shadow(0 0 2px rgba(0,0,0, .4));
+
+            @include mobileL {
+                padding: 10px 40px;
+            }
+        }
+
+        &__header__titles {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            &__sub-title {
+                color: #757575;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 1px;
+
+                @include laptop {
+                    font-size: 14px;
+                }
+            }
+
+            &__title {
+                color: #333333;
+                font-size: 24px;
+
+                @include laptop {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        &__text,
+        &__list {
+            padding: 10px 40px 0 10px;
+            color: #424242;
+
+            @include mobileL {
+                padding: 10px 40px 0 40px;
+            }
+
+            @include tablet {
+                padding: 10px 40px 40px;
+            }
+
+            @include laptop {
+                font-size: 18px;
+            }
+        }
+
+        &__list__items {
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            margin-bottom: 12px;
+
+            &__icon {
+                height: 25px;
+                opacity: .7;
+                margin-right: 5px;
+            }
+
+            &__title {
+                font-weight: bold;
+                color: #333333;
+                margin-right: 5px;
+            }
+        }
+    }
+}

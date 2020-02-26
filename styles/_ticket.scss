@@ -1,0 +1,145 @@
+.header__container__ticket {
+    position: relative;
+    overflow: hidden;
+
+    &__map {
+        position: absolute;
+        top: 30%;
+        right: -120px;
+        transform: translateY(-30%);
+        height: 180px;
+        opacity: .2;
+
+        @include laptop {
+            height: 320px;
+            right: -160px;
+        }
+    }
+
+    &__header {
+        background: #ffffff;
+        padding: 10px 10px 20px 10px;
+        text-transform: capitalize;
+
+        &__page-title {
+            display: flex;
+            align-items: center;
+            color: #333333;
+
+            &__plane {
+                transform: rotateZ(90deg);
+                height: 20px;
+                margin-right: 10px;
+
+                @include laptop {
+                    height: 30px;
+                }
+            }
+    
+            &__title {
+                font-weight: bold;
+
+                @include laptop {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &__title {
+            font: 36px/.9 'Roboto Condensed';
+            color: #333333;
+        }
+    }
+
+    &__body {
+        background: #ffffff;
+        padding: 0 10px;
+
+        &__flight-info {
+            position: relative;
+            height: 100px;
+        }
+
+        &__flight-info__number {
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #424242;
+
+            @include laptop {
+                font-size: 18px;
+            }
+        }
+
+        &__flight-info__title {
+            font-weight: bold;
+            text-transform: capitalize;
+            display: block;
+            color: #333333;
+
+            @include laptop {
+                font-size: 18px;
+            }
+        }
+
+        &__flight-info__qr {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__description {
+            padding: 20px 0 10px 0;
+        }
+
+        &__description__title {
+            display: block;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: #333333;
+
+            @include laptop {
+                font-size: 18px;
+            }
+        }
+
+        &__description__text {
+            color: #424242;
+            max-width: 550px;
+
+            @include laptop {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__logos {
+        background-image: linear-gradient(to right, #d8d8d8 66%, rgba(255,255,255,0) 0%);
+        background-position: top;
+        background-size: 15px 1px;
+        background-repeat: repeat-x;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px;
+
+        &__logo {
+            height: 40px;
+            opacity: .6;
+        }
+
+        &__bar-code {
+            font: 26px/1 'Libre Barcode 128 Text';
+            padding-top: 10px;
+            color: #424242;
+
+            @include laptop {
+                font-size: 32px;
+            }
+        }
+    }
+}
